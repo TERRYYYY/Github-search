@@ -1,11 +1,7 @@
-body{
-    margin: 0;
-    font-family: "Nunito";
-    font-size: 30px;
-    background-color: blueviolet;
-}
+
 header{
-    padding: 3em 0;  
+    padding: 3em 0; 
+    background: gray; 
 }
 a{
     color: black;
@@ -16,6 +12,7 @@ a.logo{
     font-weight: bolder;
     font-size: 25px;
     margin-left: 30px;
+    color: black;
 }
 nav{
     float: right;
@@ -24,7 +21,7 @@ ul{
     list-style-type: none;
     margin: 0;
     display: flex;
-    color: black;
+    color: white;
     margin-right: 500px;
 }
 li a{
@@ -39,11 +36,12 @@ li a:hover{
 #home{
    margin-right: 150px;
 }
-.form{
+/* .form{
     width: 50%;
     position: relative;
     height: 50px;
     font-size: 20px;
+    color: black;
     margin-left: 400px;
     
 }
@@ -55,7 +53,7 @@ li a:hover{
     border: none;
     margin-bottom: 40px;
     outline: none;
-    /* border-bottom: 1px solid black; */
+   
 }
 .form label{
    text-align: center;
@@ -96,4 +94,4 @@ li a:hover{
 }
 .form input:focus + .label-name::after, .form input:valid + .label-name::after{
     transform: translateX(0%);
-}
+} */
