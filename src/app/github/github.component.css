@@ -64,14 +64,14 @@
     grid-template-areas: "image" "body" "text";
 
     border-radius: 8px;
-    background-color: black;
+    /* background-color: black; */
     box-shadow: 5px 5px 15px gray;
     text-align: center;
     width: 350px;
     height: 400px;
     margin-top: 80px;
     margin-left: 50px;
-    color: white;
+    /* color: white; */
     transition: 0.5s ease;
 
 }
