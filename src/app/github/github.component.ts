@@ -14,6 +14,14 @@ export class GithubComponent implements OnInit {
 
   user:User;
   repo: Repository[]
+  myRepos: Repository[]
+
+  searchRepo(username) {
+    this.apiRepo.githubRepo(username).subscribe(data => {
+      this.myRepos = data
+
+    })
+  }
 
   newUser = new User ("","","","","","","");
 

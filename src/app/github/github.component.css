@@ -75,6 +75,20 @@
     transition: 0.5s ease;
 
 }
+h2{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.card-header{
+    font-size: 22px;
+    text-align: center;
+    width: 350px;
+}
+.card-body{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
 .card-image{
     grid-area: image;
 }

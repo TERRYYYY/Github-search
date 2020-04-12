@@ -12,14 +12,14 @@
         
          <!-- </div> -->
          <div class="row">
-             <div class="col-md-6" *ngFor="let myRepo of myRepos">
-                 <div class="col-md-6"> 
+             <div class="col-md-4" *ngFor="let myRepo of myRepos">
+                 <div class="col-md-4"> 
                  <div class="card">
                      <div class="card-header">
                          Language: {{myRepo.language}}
                      </div>
                      <div class="card-body">
-                         {{myRepo.name}}
+                         <h1>{{myRepo.name}} </h1>
                          <br>
                          {{myRepo.description}}
                          <br>
