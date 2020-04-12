@@ -11,7 +11,7 @@ export class GithubRepoService {
   constructor(private http: HttpClient) { }
 
   githubRepo(username):Observable<Repository[]>{
-    return this.http.get<Repository[]>("https://api.github.com/users/" + username + "/repo" + environment.apiKey)
+    return this.http.get<Repository[]>("https://api.github.com/users/" + username + "/repos" + environment.apiKey)
   }
 
 }

@@ -1,30 +1,47 @@
 <header> 
-<div id="repo-search">    
+<!-- <div id="repo-search">    
     <div class="card">
         <div class="card-body">
-            <div class="search-box">
+            <div class="search-box"> -->
                 <app-user-search (searchUser)="searchRepo($event)"></app-user-search>
 
                 <!-- <input type="text" name="box" placeholder="Enter Repository..." > -->
                 
 
-            </div>
+            <!-- </div> -->
         
+         <!-- </div> -->
+         <div class="row">
+             <div class="col-md-6" *ngFor="let myRepo of myRepos">
+                 <div class="col-md-6"> 
+                 <div class="card">
+                     <div class="card-header">
+                         Language: {{myRepo.language}}
+                     </div>
+                     <div class="card-body">
+                         {{myRepo.name}}
+                         <br>
+                         {{myRepo.description}}
+                         <br>
+                         {{myRepo.link}}
+                     </div>
+                 </div>
+                 </div>
+
+             </div>
          </div>
-        <div class="col-md-4" *ngFor="let myRepo of myRepos">`
+        <!-- <div class="col-md-4" *ngFor="let myRepo of myRepos">`
             <div class="card text-white bg-dark mb-3" style="max-width: 40rem; height: 20rem;">
                 <div class="card-header">{{myRepo.language}}</div>
                 <div class="card-body">
                     <h5 class="card-title" appHighlight>{{myRepo.name}}</h5>
                     <p class="card-text">{{myRepo.description}}</p>
-                </div>
-            </div>
+                </div> -->
+
+                
+            <!-- </div> -->
         
-        </div>
-        
-        
-        
-        
+        <!-- </div> 
     </div>
-</div>
-</header>
+</div> -->
+<!-- </header> -->

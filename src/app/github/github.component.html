@@ -10,11 +10,51 @@
  
 
 
+
+
+    
 <app-user-search (searchUser)="searchUserName($event)"></app-user-search>
 
-    <p>{{user.name}} </p>
-    <p>{{user.followers}} </p>
-    <p>{{user.public_repo}}</p>
+<div class="ROW">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+               Name: {{user.name}}
+            </div>
+            <div class="card-body">
+               Bio: {{user.bio}}
+                <br>
+                Location:{{user.location}}
+                <br>
+                Followers: {{user.followers}}
+                <br>
+                Following:{{user.following}}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="col-md-6">
+               <div class="card-header">
+                   Language{{myRepo.language}}
+               </div> 
+               <div class="card-body">
+                   {{myRepo.name}}
+                   <br>
+                   {{myRepo.description}}
+               </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <p class="card-text">Name: {{user.name}}</p>
+<p class="card-text">Followers: {{user.followers}}</p>
+<p class="card-text">Following: {{user.following}}</p>
+<p class="card-text">Public repos: {{user.public_repo}}</p> -->
 
  <!-- <div class="card">
 

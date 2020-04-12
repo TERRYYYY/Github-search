@@ -12,8 +12,8 @@ export class RepoSearchComponent implements OnInit {
 
   constructor(private apiRepo:GithubRepoService) { }
 
-  searchRepo(userlogin) {
-    this.apiRepo.githubRepo(userlogin).subscribe(data => {
+  searchRepo(username) {
+    this.apiRepo.githubRepo(username).subscribe(data => {
       this.myRepos = data
 
     })
