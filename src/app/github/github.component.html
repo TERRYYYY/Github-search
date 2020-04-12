@@ -1,24 +1,29 @@
 
-<div class="form">
-    <input type="text" name="name" autocomplete="off" required />
+<!-- <div class="form">
+    <input type="text" name="name" autocomplete="off" aria-label="Search" name ="search" [(ngModel)]="newUser.name"  required >
     <label for="name" class="label-name">
         <span class="content-name">Search Username</span>
         
     </label>
-    <button type="button" class="btn-btn-dark">GO</button>
-</div>
+    <button type="button" class="btn btn-info btn-lg" (click)="submitUser()" >GO</button>
+</div> -->
+ 
 
 
+<app-user-search (searchUser)="searchUserName($event)"></app-user-search>
 
-<!-- <div class="card">
+    <p>{{user.name}} </p>
+    <p>{{user.followers}} </p>
+    <p>{{user.public_repo}}</p>
+
+ <!-- <div class="card">
 
 <div class="card-image">
-    {{user.avatar_url}}
     
 <hr>
-</div>
+</div> -->
 
-<div class="card-body">
+<!-- <div class="card-body">
    
     <h2>{{user.name}}</h2>
     <hr>
@@ -28,4 +33,4 @@
         <p>{{user.location}}</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, aliquid hic suscipit, velit, Eaque consectetur quia fugiat ducimus numquam?</p>
     </div>
-</div> -->
+</div> --> 
