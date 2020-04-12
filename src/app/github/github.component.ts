@@ -2,6 +2,8 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import {HttpClient } from '@angular/common/http';
 import { User } from '../classes/user';
 import { GithubApiService } from '../services/github-api.service';
+import {Repository} from '../classes/repository';
+import { GithubRepoService } from '../services/github-repo.service';
 
 @Component({
   selector: 'app-github',
@@ -11,6 +13,7 @@ import { GithubApiService } from '../services/github-api.service';
 export class GithubComponent implements OnInit {
 
   user:User;
+  repo: Repository[]
 
   newUser = new User ("","","","","","","");
 
@@ -26,9 +29,13 @@ export class GithubComponent implements OnInit {
   searchUserName(username:string){
     this.apiUsername.userRequest(username);
     this.user = this.apiUsername.user;
+    this.apiRepo.githubRepo(username).subscribe(data => {
+      this.repo = data
+
+    })
   }
 
-  constructor(private http:HttpClient,private apiUsername:GithubApiService) { }
+  constructor(private http:HttpClient,private apiUsername:GithubApiService,private apiRepo:GithubRepoService) { }
 
   // doSearch(username:string){
   //   this.apiUsername.search(username)

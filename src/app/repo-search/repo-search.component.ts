@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Repository} from '../classes/repository';
+import { GithubRepoService} from '../services/github-repo.service';
 
 @Component({
   selector: 'app-repo-search',
@@ -6,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repo-search.component.css']
 })
 export class RepoSearchComponent implements OnInit {
+  myRepos: Repository[]
 
-  constructor() { }
+  constructor(private apiRepo:GithubRepoService) { }
+
+  searchRepo(userlogin) {
+    this.apiRepo.githubRepo(userlogin).subscribe(data => {
+      this.myRepos = data
+
+    })
+  }
 
   ngOnInit(): void {
   }
