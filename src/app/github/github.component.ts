@@ -17,12 +17,12 @@ export class GithubComponent implements OnInit {
   myRepos: Repository[]
   showRepos: boolean = false;
 
-  searchRepo(username) {
-    this.apiRepo.githubRepo(username).subscribe(data => {
-      this.myRepos = data
+  // searchRepo(username) {
+  //   this.apiRepo.githubRepo(username).subscribe(data => {
+  //     this.myRepos = data
 
-    })
-  }
+  //   })
+  // }
 
   toggleRepository() {
     this.showRepos = !this.showRepos

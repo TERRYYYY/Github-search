@@ -47,6 +47,7 @@ export class GithubApiService {
     return newPromise
 
   }
+  
   }
   // search(username:string){
   //   let promise = new Promise ((resolve,reject) =>{
