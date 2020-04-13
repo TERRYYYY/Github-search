@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { GithubApiService } from './services/github-api.service';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { from } from 'rxjs';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { from } from 'rxjs';
     NavbarComponent,
     RepoSearchComponent,
     NotFoundComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

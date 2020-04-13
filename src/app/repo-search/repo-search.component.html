@@ -3,7 +3,7 @@
     <div class="card">
         <div class="card-body">
             <div class="search-box"> -->
-                <app-user-search (searchUser)="searchRepo($event)"></app-user-search>
+               
 
                 <!-- <input type="text" name="box" placeholder="Enter Repository..." > -->
                 
@@ -11,25 +11,34 @@
             <!-- </div> -->
         
          <!-- </div> -->
+         <!-- <div class="container"> -->
+             <div class="jumbotron"> 
+                 <h3>Search For Your Repository</h3>
+            </div>
+
+        <app-user-search class="repo-saerch" (searchUser)="searchRepo($event)"></app-user-search>
          <div class="row">
              <div class="col-md-4" *ngFor="let myRepo of myRepos">
                  <div class="col-md-4"> 
                  <div class="card">
                      <div class="card-header">
                          Language: {{myRepo.language}}
+                        {{myRepo.date|date}}
                      </div>
                      <div class="card-body">
                          <h1>{{myRepo.name}} </h1>
                          <br>
                          {{myRepo.description}}
                          <br>
-                         {{myRepo.link}}
+                         
                      </div>
                  </div>
                  </div>
 
              </div>
          </div>
+        
+        <!-- </div> -->
         <!-- <div class="col-md-4" *ngFor="let myRepo of myRepos">`
             <div class="card text-white bg-dark mb-3" style="max-width: 40rem; height: 20rem;">
                 <div class="card-header">{{myRepo.language}}</div>

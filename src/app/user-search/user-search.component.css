@@ -1,5 +1,17 @@
 form{
     text-align: center;
+    margin-left: 350px;
+    margin-top: 20px;
+    font-size: 17px;
+}
+form input{
+    width: 400px;
+    height: 40px;
+    font-size: 17px;
+}
+.btn{
+    margin-left: 10px;
+    font-size: 17px;
 }
 .form{
     width: 50%;

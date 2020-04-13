@@ -67,9 +67,9 @@
     /* background-color: black; */
     box-shadow: 5px 5px 15px gray;
     text-align: center;
-    width: 350px;
-    height: 400px;
-    margin-top: 80px;
+    width: 400px;
+    height: 600px;
+    margin-top: 50px;
     margin-left: 50px;
     /* color: white; */
     transition: 0.5s ease;
@@ -78,11 +78,14 @@
 h2{
     margin-top: 20px;
     margin-right: 20px;
+    font-size: 26px;
+    font-style: oblique;
+    font-weight: bolder;
 }
 .card-header{
     font-size: 22px;
     text-align: center;
-    width: 350px;
+    width: 395px;
 }
 .card-body{
     font-size: 18px;
@@ -106,4 +109,13 @@ h2{
 }
 body{
     font-size: 25px;
+}
+.profile-pic {
+  width: 250px;
+  border: 2px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
