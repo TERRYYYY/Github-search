@@ -15,6 +15,7 @@ import { from } from 'rxjs';
 import { DateCountPipe } from './date-count.pipe';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { RepoHoverDirective } from './repo-hover.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
     RepoSearchComponent,
     NotFoundComponent,
     UserSearchComponent,
-    DateCountPipe
+    DateCountPipe,
+    RepoHoverDirective
   ],
   imports: [
     BrowserModule,
