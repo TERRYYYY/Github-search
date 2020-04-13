@@ -22,14 +22,16 @@
                  <div class="col-md-4"> 
                  <div class="card">
                      <div class="card-header">
-                         Language: {{myRepo.language}}
-                        {{myRepo.date|date}}
+                        <h1>{{myRepo.name}} </h1>
+                          
                      </div>
                      <div class="card-body">
-                         <h1>{{myRepo.name}} </h1>
-                         <br>
                          {{myRepo.description}}
                          <br>
+                         <br>
+                        Language: <span>{{myRepo.language}}</span>
+                        <br> <br>
+                        Created :<span>  {{myRepo.created_at | dateCount}} </span>
                          
                      </div>
                  </div>

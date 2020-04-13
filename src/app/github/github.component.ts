@@ -50,8 +50,9 @@ export class GithubComponent implements OnInit {
   // }
 
   ngOnInit(): void {
-    this.searchUserName("TERRYYYY")
+    this.searchUserName("terryyyy")
   }
+  
     // this.apiUsername.githubApiRequest()
     // this.user = this.apiUsername.user
 }

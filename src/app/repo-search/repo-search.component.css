@@ -10,6 +10,7 @@
 h1{
     font-size: 28px;
     font-weight: bolder;
+    text-transform: capitalize;
 }
 .jumbotron{
     height: 200px;
@@ -22,6 +23,10 @@ h3{
     font-weight: bolder;
     margin-top: 30px;
 
+}
+span{
+    font-size: 16px;
+    color: blue;
 }
 /* .card{
      position: absolute;
