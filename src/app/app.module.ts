@@ -13,6 +13,8 @@ import { GithubApiService } from './services/github-api.service';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { from } from 'rxjs';
 import { DateCountPipe } from './date-count.pipe';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { DateCountPipe } from './date-count.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule
   ],
   providers: [GithubApiService],
   bootstrap: [AppComponent]
