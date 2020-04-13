@@ -75,6 +75,28 @@
     transition: 0.5s ease;
 
 }
+.repos{
+    margin-top: 100px;
+    margin-left: 20px;
+    width: 400px;
+    height: 450px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+.repos-text{
+    margin-left: 20px;
+}
+.repos-header{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.btn{
+    font-size: 18px;
+    border-radius: 15px;
+}
 h2{
     margin-top: 20px;
     margin-right: 20px;

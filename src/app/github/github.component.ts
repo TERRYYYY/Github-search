@@ -15,6 +15,7 @@ export class GithubComponent implements OnInit {
   user:User;
   repo: Repository[]
   myRepos: Repository[]
+  showRepos: boolean = false;
 
   searchRepo(username) {
     this.apiRepo.githubRepo(username).subscribe(data => {
@@ -23,14 +24,19 @@ export class GithubComponent implements OnInit {
     })
   }
 
-  newUser = new User ("","","","","","","");
+  toggleRepository() {
+    this.showRepos = !this.showRepos
+  }
+
+
+  newUser = new User ("","","","","","","","");
 
   @Output()
   searchUser: EventEmitter<string> = new EventEmitter<string>()
 
   submitUser() {
     this.searchUser.emit(this.newUser.name);
-    this.newUser = new User("", "", "", "", "", "","")
+    this.newUser = new User("", "","", "", "", "", "","")
 
   }
 
@@ -52,7 +58,7 @@ export class GithubComponent implements OnInit {
   ngOnInit(): void {
     this.searchUserName("terryyyy")
   }
-  
+
     // this.apiUsername.githubApiRequest()
     // this.user = this.apiUsername.user
 }

@@ -18,11 +18,19 @@
 <div class="row">
     <div class="col-md-6">
         <div class="card">
+            <div class="col-md-16">
             <div class="card-header">
                 <img class="profile-pic" src="{{ user.avatar_url }}" alt="" />
+                
               <h2>  {{user.name}} </h2>
+            <button type="button" class="btn btn-info" (click)='toggleRepository()'>
+                {{showRepos? 'HIDE':'SHOW'}} REPOS
+            </button>
+           
+            <!-- <h4><a href="{{user.repos_url}}"><button type="submit" class="btn btn-primary">Github profile</button> </a> </h4> -->
             </div>
             <div class="card-body">
+                
                Bio: {{user.bio}} <br>
             <br>
                 Location: {{user.location}} <br>
@@ -30,27 +38,44 @@
                 Followers: {{user.followers}} <br>
                 <br>
                 Following: {{user.following}}
+            </div>
+            </div>
+            
 
             </div>
-        </div>
+            <div class="col-md-6">
+                hello
+            </div>
     </div>
 
-    <!-- <div class="col-md-6">
-        <div class="card">
-            <div class="col-md-6">
-               <div class="card-header">
-                   Language{{myRepo.language}}
-               </div> 
-               <div class="card-body">
-                   {{myRepo.name}}
-                   <br>
-                   {{myRepo.description}}
-               </div>
-
-            </div>
+    <div class="col-md-16">
+    <div class="col-md-4" *ngFor = "let myRepo of repo">
+        <div class="repos">
+        
+            <div class="col-md-12" *ngIf = 'showRepos'>
+                <div class="col-md-12">
+                <div class="repos-header">
+                    <h1>{{myRepo.name}} </h1>
+                </div>
+                <div class="repos-text">
+                    {{myRepo.description}}
+                    <br>
+                    <br>
+                    Language: <span>{{myRepo.language}}</span>
+                    <br> <br>
+                    Created :<span> {{myRepo.created_at | dateCount}} </span>
+                    <br> <br>
+                    <h4><a href="{{myRepo.html_url}}"><button type="submit" class="btn btn-primary">See More</button> </a> </h4>
+             </div>
+               
+             
+             </div>
         </div>
-    </div> -->
+    </div>
+    </div>
+    
 </div>
+
 
 <!-- <p class="card-text">Name: {{user.name}}</p>
 <p class="card-text">Followers: {{user.followers}}</p>

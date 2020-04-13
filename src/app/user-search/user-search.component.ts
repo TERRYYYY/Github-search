@@ -7,7 +7,7 @@ import { User } from '../classes/user';
   styleUrls: ['./user-search.component.css']
 })
 export class UserSearchComponent implements OnInit {
-  newUser = new User("", "", "", "", "","","")
+  newUser = new User("","", "", "", "", "","","")
 
 
   @Output()
@@ -16,7 +16,7 @@ export class UserSearchComponent implements OnInit {
 
   submitUser() {
     this.searchUser.emit(this.newUser.name);
-    this.newUser = new User("", "", "","", "", "","")
+    this.newUser = new User("","", "", "","", "", "","")
 
   }
 

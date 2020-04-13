@@ -13,7 +13,7 @@ export class GithubApiService {
   // users : Object[]
 
   constructor(private http:HttpClient) { 
-    this.user = new User("","","","","","","")
+    this.user = new User("","","","","","","","")
   }
 
   userRequest(username:string){
